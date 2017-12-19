@@ -36,7 +36,7 @@ public class LoopViewPager extends ViewPager {
 
     public LoopViewPager(Context context, AttributeSet attrs) {
         super(context, attrs);
-        setScrollerDuration(this, 500);
+        setScrollerDuration(500);
         addOnPageChangeListener(new SimpleOnPageChangeListener() {
             @Override
             public void onPageScrollStateChanged(int state) {
@@ -118,7 +118,7 @@ public class LoopViewPager extends ViewPager {
     /**
      * @param time 设置滚动动画时间
      */
-    public void setScrollerDuration(ViewPager viewPager, final int time) {
+    public void setScrollerDuration(final int time) {
         try {
             Field viewPagerField = ViewPager.class.getDeclaredField("mScroller");
             viewPagerField.setAccessible(true);
@@ -130,7 +130,7 @@ public class LoopViewPager extends ViewPager {
                     super.startScroll(startX, startY, dx, dy, time);
                 }
             };
-            viewPagerField.set(viewPager, scroller);
+            viewPagerField.set(this, scroller);
         } catch (Exception e) {
             e.printStackTrace();
         }
