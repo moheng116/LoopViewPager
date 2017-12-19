@@ -4,20 +4,17 @@
 LoopViewPager loopViewPager1 =  findViewById(R.id.loop_view_pager_1);
 
 LoopPageIndicator pageIndicator1 = findViewByI(R.id.page_indicator_1);
-
-List<View> views1 = new ArrayList<>();
-     
-for (int i = 1; i <= 3; i++) {
-     TextView textView = getTextView(i);
-     textView.append("LoopViewPager");
-     views1.add(textView);
-}
-addFirstAndLast(views1);
-        
-loopViewPager1.setScrollerDuration(500);
-loopViewPager1.setAdapter(new ViewPagerAdapter<>(views1));
-pageIndicator1.setViewPager(loopViewPager1);
-loopViewPager1.startLoop();
+        List<View> views1 = new ArrayList<>();
+        for (int i = 1; i <= 3; i++) {
+            TextView textView = getTextView(i);
+            textView.append("LoopViewPager");
+            views1.add(textView);
+        }
+        addFirstAndLast(views1);
+        loopViewPager1.setScrollerDuration(500);
+        loopViewPager1.setAdapter(new ViewPagerAdapter<>(views1));
+        pageIndicator1.setViewPager(loopViewPager1);
+        loopViewPager1.startLoop();
 
     private void addFirstAndLast(List<View> views) {
         //大于1时才能开启滚动
