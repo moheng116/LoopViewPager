@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context="com.wyh.loopviewpager.MainActivity">
+
+    <com.wyh.loopviewpager.LoopViewPager
+        android:id="@+id/loop_view_pager_1"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <com.wyh.loopviewpager.LoopPageIndicator
+        android:id="@+id/page_indicator_1"
+        android:layout_width="fill_parent"
+        android:layout_height="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/loop_view_pager_1"
+        app:loop_indicator_normal_color="@color/colorPrimary"
+        app:loop_indicator_radius="8dp" />
+
+    <com.wyh.loopviewpager.LoopViewPager
+        android:id="@+id/loop_view_pager_2"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <com.wyh.loopviewpager.LoopPageIndicator
+        android:id="@+id/page_indicator_2"
+        android:layout_width="fill_parent"
+        android:layout_height="20dp"
+        android:paddingEnd="10dp"
+        android:paddingStart="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/loop_view_pager_2"
+        app:loop_indicator_gravity="center"
+        app:loop_indicator_height="10dp"
+        app:loop_indicator_normal_color="@color/colorPrimaryDark"
+        app:loop_indicator_type="rectangle"
+        app:loop_indicator_width="20dp" />
+</android.support.constraint.ConstraintLayout>
