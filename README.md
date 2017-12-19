@@ -35,3 +35,4 @@
         textView.setText("第" + i + "页");
         return textView;
     }
+![](https://raw.githubusercontent.com/moheng116/LoopViewPager/master/%E8%BD%AE%E6%92%AD.gif)
