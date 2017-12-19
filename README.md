@@ -4,6 +4,7 @@
 LoopViewPager loopViewPager1 =  findViewById(R.id.loop_view_pager_1);
 
 LoopPageIndicator pageIndicator1 = findViewByI(R.id.page_indicator_1);
+
         List<View> views1 = new ArrayList<>();
         for (int i = 1; i <= 3; i++) {
             TextView textView = getTextView(i);
